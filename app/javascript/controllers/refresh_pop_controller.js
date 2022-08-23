@@ -1,6 +1,4 @@
 import { Controller } from '@hotwired/stimulus'
-import { csrfToken } from "@rails/ujs"
-
 
 export default class extends Controller {
   static targets = [ 'population' ]
@@ -21,7 +19,6 @@ export default class extends Controller {
     })
       .then(response => response.json())
       .then((data) => {
-        // console.log(data[countryId]?.population)
         this.populationTarget.innerText = data.population
       })
   }
