@@ -4,21 +4,6 @@
 
 <div class="container">
   <div class="row">
-    <h2>📇 Swipe'em!</h2>
-    <ul class="stack" data-controller="swinger">
-      <% @countries.each do |country| %>
-        <div>
-          <li data-swinger-target="card" id="country-item-<%= country.id%>" >
-            <%= render country %>
-            <div class="d-flex justify-content-around">
-              <a style href="#" data-action="click->swinger#choose" data-swinger-like-param="false">Nope</a>
-              <a style href="#" data-action="click->swinger#choose" data-swinger-like-param="true">Like</a>
-            </div>
-          </li>
-        </div>
-      <% end %>
-    </ul>
-    <h2>📝 Check'em! out</h2>
     <% @countries.each do |country| %>
     <div class="col-4">
       <%= render country %>

@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def tinder
+    @countries = Country.all
   end
 end

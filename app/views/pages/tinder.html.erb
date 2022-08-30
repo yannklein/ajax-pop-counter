@@ -1,0 +1,13 @@
+<ul class="card-tinder-stack" data-controller="swinger">
+  <% @countries.each do |country| %>
+    <div>
+      <li data-swinger-target="card" id="country-item-<%= country.id%>" >
+        <%= render 'card', country: country %>
+        <div class="d-flex justify-content-around">
+          <a style href="#" data-action="click->swinger#choose" data-swinger-like-param="false">Nope</a>
+          <a style href="#" data-action="click->swinger#choose" data-swinger-like-param="true">Like</a>
+        </div>
+      </li>
+    </div>
+  <% end %>
+</ul>

@@ -1,25 +1,33 @@
-ul.stack {
-  height: 200px;
-  width: 200px;
+.card-tinder-stack {
+  list-style: none;
+  padding: 0;
+}
+
+.card-tinder-stack {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 
-ul.stack > div {
-  height: 100%;
-}
-
-ul.stack li {
-  height: 100%;
-  list-style: none;
+.card-tinder-stack li {
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
   cursor: grab;
+  display: flex;
+  flex-direction: column;
 }
 
-ul.stack li:active {
+.card-tinder-stack li:active {
   cursor: grabbing;
+}
+
+.card-tinder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
